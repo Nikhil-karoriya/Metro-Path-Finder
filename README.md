@@ -1,8 +1,61 @@
-# Metro Path Finder
+# 🚇 Metro Path Finder – Hyderabad Metro (Frontend)
 
-In this project, I have implemented Dijkstra's algorithm to find the shortest path and route between Source and Destination stations. I have taken Hyderabad Metro example, where each station is acting as a node of the graph. Weight of each edge is assumed to be 1 unit for the sake of simplicity and adjacency matrix is used to represent the graph.
+**Metro Path Finder** is a web-based application that allows users to find the **shortest path** between two metro stations in Hyderabad using **Dijkstra's Algorithm**. The app is built using **HTML, CSS, and JavaScript**, offering an intuitive interface to explore 56 Hyderabad Metro stations.
 
-## Here's how our graph would look like:
+---
+
+## 🌐 Live Demo
+🔗 [View Live Application](https://nikhil-karoriya.github.io/Metro-Path-Finder/) <!-- Replace with actual link if hosted -->
+
+---
+
+## 📸 Preview
+
+![Home page](docs/pics/Home.png)
+![stations card](docs/pics/stations.png)
+![station form](docs/pics/paths.png)
+![route](docs/pics/route.png)
+---
+
+## 🚀 Features
+
+- 🔍 **Shortest Path Finder**: Enter a source and destination station to find the shortest path based on distance using Dijkstra’s Algorithm.
+- 📍 **56 Hyderabad Metro Stations**: Covers all key stations from the Hyderabad Metro Rail network.
+- 🧭 **Path Display**: Shows step-by-step stations to travel, styled in **interactive card format**.
+- ⚡ **Real-Time Response**: Fast algorithmic calculation and UI rendering of paths.
+---
+
+## 🛠️ Technologies Used
+
+- **HTML5** – Structure of the user interface  
+- **CSS3** – Styling, layout, and responsive design  
+- **JavaScript (ES6)** – DOM manipulation, logic, and Dijkstra’s implementation  
+- **Dijkstra’s Algorithm** – Graph-based shortest path calculation  
+
+---
+
+## 🧠 How It Works
+
+1. The metro system is modeled as a **graph** where each station is a node.
+2. When a user inputs a **source** and **destination**, Dijkstra’s algorithm computes the **shortest distance** path.
+3. The resulting path and all intermediate stations are displayed in a **card-style UI**.
+
+---
+
+## 📂 Project Structure
+
+Metro-Path-Finder/
+├── index.html           # Main webpage structure
+├── style.css            # Styling for layout and design
+├── script.js            # Handles UI logic and user input
+├── dijkstra.js          # Contains Dijkstra’s algorithm implementation
+├── stations.js          # Data for 56 Hyderabad metro stations and graph structure
+├── assets/
+│   └── screenshot.png   # App preview and other static files (images, icons, etc.)
+├── README.md            # Project documentation
+
+
+## Here's how metro station looks like in the form of graph :
 
 ![alt text](https://github.com/Nikhil-karoriya/HYD-Metro_Dijkstra-s_Algorithm/blob/main/graph_representation.png?)
 
