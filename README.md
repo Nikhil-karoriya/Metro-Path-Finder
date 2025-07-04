@@ -1,4 +1,4 @@
-# HYD-Metro-Project
+# Metro Path Finder
 
 In this project, I have implemented Dijkstra's algorithm to find the shortest path and route between Source and Destination stations. I have taken Hyderabad Metro example, where each station is acting as a node of the graph. Weight of each edge is assumed to be 1 unit for the sake of simplicity and adjacency matrix is used to represent the graph.
 
