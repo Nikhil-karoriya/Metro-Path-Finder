@@ -45,14 +45,14 @@
 ## 📂 Project Structure
 
 Metro-Path-Finder/
-├── index.html           # Main webpage structure
-├── style.css            # Styling for layout and design
-├── script.js            # Handles UI logic and user input
-├── dijkstra.js          # Contains Dijkstra’s algorithm implementation
-├── stations.js          # Data for 56 Hyderabad metro stations and graph structure
+├── index.html           
+├── style.css            
+├── script.js            
+├── dijkstra.js          
+├── stations.js          
 ├── assets/
-│   └── screenshot.png   # App preview and other static files (images, icons, etc.)
-├── README.md            # Project documentation
+│   └── screenshot.png   
+├── README.md            
 
 
 ## Here's how metro station looks like in the form of graph :
