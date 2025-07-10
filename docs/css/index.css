@@ -1,0 +1,154 @@
+.main {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../pics/metroBG.jpg");
+    background-size: cover;
+    padding: 0.1rem;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.containr {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.banner {
+    color: #ffd89d;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 15%;
+    animation: banner_h 1.5s ease-in-out;
+}
+
+@keyframes banner_h {
+    from {
+        top: 5%;
+    }
+    to {
+        top: 15%;
+    }
+}
+
+.banner h1 {
+    font-size: 3.3rem;
+    margin: 0;
+}
+
+.banner h4 {
+    font-size: 1.5rem;
+    margin: 0.7px 0;
+    font-style: italic;
+    color: hsl(36, 100%, 86%);
+}
+
+.buttons-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 1.5rem;
+    opacity: 0;
+    animation: ease 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes ease {
+  to {
+    opacity: 1;
+  }
+}
+
+.buttons-container button {
+  position: relative;
+  overflow: hidden;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  color: #befff2;
+  background-color: #988ac5;
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+
+.buttons-container button::before {
+  content: "";
+  color: #5e7e78;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #476498;
+  z-index: -1;
+  transition: top 0.4s ease;
+}
+
+.heading-underline {
+  width: 60%;
+  height: 3px;
+  background-color: #ffd89d;
+  margin: 0.8rem auto;
+  border-radius: 2px;
+}
+
+.buttons-container button:hover::before {
+  top: 0;
+}
+
+.buttons-container button:hover {
+  transform: scale(1.05);
+}
+
+@media (orientation: portrait) {
+  body, html {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .main {
+    height: 100vh;
+    overflow: hidden;
+    background-position: center;
+  }
+
+  .banner h4 {
+    color: hsl(36, 100%, 86%);
+    font-weight: 540;
+  }
+
+  .banner h1 {
+    color: #ffd89d;
+    font-weight: 550;
+  }
+
+    .heading-underline {
+        background-color: #fbe6c7;
+        width: 70%;
+    }
+
+    .buttons-container {
+        top: 55%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 90%;
+    }
+
+  .buttons-container a {
+    width: 60%;
+  }
+
+  .buttons-container button {
+    width: 100%;
+  }
+}
+

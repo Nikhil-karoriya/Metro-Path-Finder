@@ -1,0 +1,389 @@
+/* Updated CSS for Metro Path Finder */
+body {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../pics/subway_metro.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.first_view {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.planner {
+  width: 90%;
+  max-width: 400px;
+  background-color: #e2c799f1;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0.1rem 0.1rem 1rem #C08261;
+  margin: 2rem auto;
+}
+
+.journey {
+  display: flex;
+  border-bottom: 1px solid #9A3B3B;
+  margin-bottom: 1rem;
+  color: #9A3B3B;
+  align-items: center;
+}
+
+.journey img {
+  height: 3rem;
+  width: 4rem;
+  margin-right: 1rem;
+}
+
+.src_ip {
+  width: 100%;
+  height: 2.3rem;
+  border-radius: 0.25rem;
+  border: 1px solid #9A3B3B;
+  background-color: #BC9F8B;
+  color: black;
+  box-shadow: 1px 1px 0.3rem #9a3b3b;
+  padding: 0 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  position: relative;
+}
+
+.suggestions {
+  background: white;
+  border: 1px solid #9a3b3b;
+  max-height: 150px;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 999;
+  width: calc(100% - 1rem);
+  left: 0.5rem;
+  border-radius: 4px;
+  box-shadow: 1px 1px 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.suggestions div {
+  padding: 0.4rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.suggestions div:hover {
+  background-color: #f5d9c6;
+}
+
+.show_lbl {
+  font-weight: 500;
+  color: red;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.shortest {
+  margin: 2rem 0;
+}
+
+.short_rt {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(255, 0, 0, 0.687);
+  border-bottom: 1px solid rgba(255, 0, 0, 0.685);
+  padding: 0.3rem 0;
+}
+
+.short_rt img {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 1rem;
+}
+
+.short_rt p {
+  color: #9A3B3B;
+  margin: 0;
+}
+
+.short_rt:hover {
+  cursor: pointer;
+}
+
+.short_rt i {
+  margin-left: auto;
+  color: green;
+}
+
+.bt_sub {
+  display: block;
+  margin: 1.5rem auto 0 auto;
+}
+
+#map_btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 100;
+  background-color: #FFDA76;
+  color: #1E2A5E;
+  border: 1px solid #9A3B3B;
+  transition: background-color 0.3s ease;
+}
+
+#map_btn:hover {
+  background-color: #f8d46f;
+}
+
+.metro_map {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  width: 90%;
+  max-width: 700px;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 1rem #C08261;
+}
+
+.metro_map img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+.metro_map img:hover {
+  transform: scale(1.05);
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 1rem;
+  width: 100%;
+}
+
+.stations-heading {
+  text-align: center;
+  margin: 1.5rem auto 1rem auto;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #FFDA76;
+  background: linear-gradient(135deg, #3F72AF, #355c8a);
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .stations-heading {
+    font-size: 1.3rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stations-heading {
+    font-size: 1.1rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+
+
+.grid-item {
+  background-color: #3F72AF;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  flex: 1 1 120px;
+  max-width: 150px;
+}
+
+.grid-item:hover {
+  transform: scale(1.1);
+  background-color: #A6E3E9;
+  color: black;
+}
+
+#final_path {
+  display: none;
+  position: relative;
+  text-align: center;
+  padding: 2rem;
+}
+
+#final_path h2 {
+  color: #FFDA76;
+  text-decoration: underline;
+  margin-bottom: 2rem;
+}
+
+#dist, #paths {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #FBF0B2;
+  border: 1px solid #ccc;
+  margin: 1rem auto;
+  max-width: 1000px;
+}
+
+#dist {
+  background-color: #CAEDFF;
+  color: #1E2A5E;
+}
+
+#paths {
+  background-color: hsla(0, 0%, 18%, 0.792); /* rich dark grey for subway steel vibe */
+  color: #F0F0F0;
+  font-size: 1.2rem;
+  border: 1px solid #555;
+}
+
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 8px 16px;
+  background-color: #FFDA76;
+  color: #1E2A5E;
+  border: 1px solid #9A3B3B;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.back-btn:hover {
+  background-color: #f3c94b;
+  color: black;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+  .back-btn {
+    position: static;
+    display: block;
+    width: fit-content;
+    margin: 1rem auto 0.5rem auto;
+    font-size: 15px;
+    padding: 6px 14px;
+  }
+}
+
+
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.station-card {
+  background: linear-gradient(135deg, #3F72AF, #355c8a);
+  color: white;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  border: none;
+  border-radius: 12px;
+  margin: 0.5rem auto;
+  font-size: 1.1rem;
+  width: 100%;
+  max-width: 340px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.station-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.station-card .title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #FFDA76;
+}
+
+.station-action {
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f0f0f0;
+  background-color: rgba(255, 218, 118, 0.2);
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+}
+
+
+@media (max-width: 768px) {
+  .planner {
+    width: 95%;
+    margin: 1rem auto;
+    position: static;
+  }
+
+  .grid-item {
+    flex: 1 1 100px;
+    max-width: 120px;
+  }
+
+  #map_btn {
+    position: static;
+    display: block;
+    margin: 1rem auto;
+  }
+
+  .station-card {
+    max-width: 95vw;
+    font-size: 1rem;
+    padding: 0.7rem 0.3rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  #paths {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .station-card {
+    max-width: 99vw;
+    font-size: 0.95rem;
+    padding: 0.5rem 0.2rem;
+  }
+}

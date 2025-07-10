@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Heading Section */
+.heading {
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.heading h1 {
+  display: inline-block;
+  color: #3d0066;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.7rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem #d7b4f3;
+  animation: banner_h 1.2s ease-in-out;
+  font-size: 2.2rem;
+}
+
+@keyframes banner_h {
+  from {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Top Right "Find Route" Button */
+.ToRoute {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.ToRoute a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #3d0066;
+  padding: 0.6rem 1.2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem #fc5185;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+.ToRoute a:hover {
+  background-color: #14ffec;
+  color: #1c1c1c;
+}
+
+/* Cards Container */
+#cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Card Styling */
+.card {
+  background-color: #6a42c2;
+  border-radius: 1.2rem;
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 1.2rem #c8a1e0;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.02);
+}
+
+.card-body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-title {
+  color: #ffddcc;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .heading h1 {
+    font-size: 1.6rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .ToRoute {
+    position: static;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .ToRoute a {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+
+  #cards-container {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+}
