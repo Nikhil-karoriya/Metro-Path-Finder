@@ -1,4 +1,4 @@
-# 🚇 Metro Path Finder – Hyderabad Metro (Frontend)
+# 🚇 Metro Path Finder – Hyderabad Metro 
 
 **Metro Path Finder** is a web-based application that allows users to find the **shortest path** between two metro stations in Hyderabad using **Dijkstra's Algorithm**. The app is built using **HTML, CSS, and JavaScript**, offering an intuitive interface to explore 56 Hyderabad Metro stations.
 
