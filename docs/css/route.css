@@ -259,7 +259,7 @@ body {
 }
 
 #paths {
-  background-color: hsla(0, 0%, 18%, 0.792); /* rich dark grey for subway steel vibe */
+  background-color: hsla(0, 0%, 18%, 0.792); 
   color: #F0F0F0;
   font-size: 1.2rem;
   border: 1px solid #555;
@@ -270,35 +270,40 @@ body {
   top: 20px;
   left: 20px;
   z-index: 100;
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 1rem;
   border-radius: 5px;
-  padding: 8px 16px;
+  padding: 6px 16px;
   background-color: #FFDA76;
   color: #1E2A5E;
   border: 1px solid #9A3B3B;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.2;
 }
 
-/* Hover effect */
 .back-btn:hover {
   background-color: #f3c94b;
   color: black;
 }
 
-/* Responsive behavior for smaller screens */
 @media (max-width: 768px) {
   .back-btn {
     position: static;
     display: block;
-    width: fit-content;
-    margin: 1rem auto 0.5rem auto;
-    font-size: 15px;
-    padding: 6px 14px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin: 1.5rem auto 0 auto;  
+    text-align: center;
+    border-radius: 5px;
+    width: auto;
+    height: 48px;
+    text-align: center;
+    justify-content: center;
   }
 }
-
 
 .title {
   font-size: 1.5em;
