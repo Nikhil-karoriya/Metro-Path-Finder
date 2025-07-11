@@ -1,4 +1,3 @@
-/* Updated CSS for Metro Path Finder */
 body {
   height: 100vh;
   width: 100%;
@@ -125,23 +124,60 @@ body {
   margin: 1.5rem auto 0 auto;
 }
 
+.responsive-btn {
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #FFDA76;
+  color: #1E2A5E;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #9A3B3B;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  max-width: 95vw;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.responsive-btn:hover {
+  background-color: #f3c94b;
+  color: black;
+}
+
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
 #map_btn {
   position: fixed;
   top: 20px;
   right: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
   z-index: 100;
-  background-color: #FFDA76;
-  color: #1E2A5E;
-  border: 1px solid #9A3B3B;
-  transition: background-color 0.3s ease;
 }
 
-#map_btn:hover {
-  background-color: #f8d46f;
+@media screen and (max-width: 1024px) {
+  .back-btn,
+  #map_btn {
+    position: static;
+    display: block;
+    margin: 1rem auto;
+    font-size: 0.95rem;
+    padding: 0.6rem 1.1rem;
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .back-btn,
+  #map_btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.9rem;
+  }
 }
 
 .metro_map {
@@ -207,8 +243,6 @@ body {
   }
 }
 
-
-
 .grid-item {
   background-color: #3F72AF;
   color: white;
@@ -263,46 +297,6 @@ body {
   color: #F0F0F0;
   font-size: 1.2rem;
   border: 1px solid #555;
-}
-
-.back-btn {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 100;
-  font-weight: 600;
-  font-size: 1rem;
-  border-radius: 5px;
-  padding: 6px 16px;
-  background-color: #FFDA76;
-  color: #1E2A5E;
-  border: 1px solid #9A3B3B;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  line-height: 1.2;
-}
-
-.back-btn:hover {
-  background-color: #f3c94b;
-  color: black;
-}
-
-@media (max-width: 768px) {
-  .back-btn {
-    position: static;
-    display: block;
-    font-size: 1rem;
-    padding: 10px 20px;
-    line-height: 1.2;
-    font-weight: 400;
-    margin: 1.5rem auto 0 auto;  
-    text-align: center;
-    border-radius: 5px;
-    width: auto;
-    height: 48px;
-    text-align: center;
-    justify-content: center;
-  }
 }
 
 .title {
@@ -363,12 +357,6 @@ body {
   .grid-item {
     flex: 1 1 100px;
     max-width: 120px;
-  }
-
-  #map_btn {
-    position: static;
-    display: block;
-    margin: 1rem auto;
   }
 
   .station-card {
