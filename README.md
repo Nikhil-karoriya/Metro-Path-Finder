@@ -1,64 +1,68 @@
-# 🚇 Metro Path Finder – Hyderabad Metro
+# Metro Path Finder – Hyderabad Metro
 
-**Metro Path Finder** is a web-based application that helps users find the **shortest route** between two metro stations in Hyderabad using **Dijkstra's Algorithm**. Designed with a clean, interactive UI, the app is fully responsive and works smoothly on all screen sizes.
-
----
-
-## 🌐 Live Demo
-
-🔗 [Launch App](https://nikhil-karoriya.github.io/Metro-Path-Finder/index.html)
+**Metro Path Finder** is a web-based application that calculates the shortest route between two metro stations in Hyderabad using **Dijkstra's Algorithm**. Built with clean, responsive design principles, the app delivers a fast and intuitive user experience across devices.
 
 ---
 
-## 📸 Preview
+## Live Demo
 
-### 🖥️ Wide Screen View
+[Launch App](https://nikhil-karoriya.github.io/Metro-Path-Finder/index.html)
 
-| Home Screen | Station List | Route Form | Route Result |
-|-------------|--------------|------------|--------------|
+---
+
+## Preview
+
+### Desktop View
+
+| Home | Station List | Route Form | Route Result |
+|------|--------------|------------|--------------|
 | ![Home - Wide](docs/pics/show/full_home.jpeg) | ![Stations - Wide](docs/pics/show/full_stations.jpeg) | ![Form - Wide](docs/pics/show/full_form.jpeg) | ![Route - Wide](docs/pics/show/full_route.jpeg) |
 
----
+### Mobile View
 
-### 📱 Mobile View
-
-| Home Screen | Station List | Route Form | Route Result |
-|-------------|--------------|------------|--------------|
+| Home | Station List | Route Form | Route Result |
+|------|--------------|------------|--------------|
 | ![Home - Mobile](docs/pics/show/mobile_home.png) | ![Stations - Mobile](docs/pics/show/mobile_stations.png) | ![Form - Mobile](docs/pics/show/mobile_fill.png) | ![Route - Mobile](docs/pics/show/mobile_route.png) |
 
-Explore the app’s consistent experience across devices with dynamic cards and smooth transitions.
+The app delivers a consistent user experience across all screen sizes, using responsive cards and seamless transitions.
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🔍 **Shortest Path Calculation** using Dijkstra's Algorithm
-- 🗺️ Covers **56 Metro Stations** from Hyderabad
-- 📱 **Fully Responsive UI** – works seamlessly on mobile and desktop
-- 🎴 **Card-Based Visualization** for routes and steps
-- 📌 **Interactive Map Button** toggle
-- ⚡ **Real-Time Results** without page reloads  
+- Shortest path calculation using **Dijkstra's Algorithm**
+- Coverage of **56 Hyderabad Metro stations**
+- Fully **responsive interface** for mobile and desktop
+- Dynamic **card-based visualization** of the route
+- Toggleable interactive **metro map** view
+- Real-time results without page reloads
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- **HTML5** – Layout and structure  
-- **CSS3** – Responsive design and visual styling  
-- **JavaScript (ES6)** – Core logic, station handling, Dijkstra’s algorithm  
-- **Bootstrap 5** – Responsive form elements and buttons  
-- **Dijkstra’s Algorithm** – For efficient pathfinding
+- **HTML5** – Semantic structure and layout
+- **CSS3** – Responsive design and custom styles
+- **JavaScript (ES6)** – Logic, DOM manipulation, and graph algorithms
+- **Bootstrap 5** – Layout utilities, forms, and components
+- **Graph Algorithms** – Custom implementation of Dijkstra's algorithm
+
 ---
 
-## 🧠 How It Works
+## How It Works
 
-1. Each metro station is modeled as a **node in a graph**.
-2. The shortest path is calculated using **Dijkstra’s Algorithm**.
-3. The computed path is shown as a series of styled **station cards**.
+1. Metro stations are modeled as **nodes** in a weighted graph.
+2. Connections between stations represent **edges with weights** (typically distance).
+3. When the user submits a start and destination station, **Dijkstra’s Algorithm** computes the shortest path.
+4. The result is dynamically rendered using station **cards and transitions**.
 
 ---
 
 ## Station Codes
+
+Below is the list of all metro stations and their corresponding node numbers:
+
+
     Node number                                       Station Name
     
         1                                              LBnagar
@@ -116,3 +120,12 @@ Explore the app’s consistent experience across devices with dynamic cards and 
         54                                             Dugamcheruvu
         55                                             Hitechcity
         56                                             Raidurg
+
+---
+
+## Project Highlights
+
+- Implements graph theory concepts in a real-world application
+- Demonstrates JavaScript proficiency in DOM manipulation and logic structuring
+- Clean, mobile-first UI built without relying heavily on third-party frameworks
+- Focuses on performance, responsiveness, and usability
