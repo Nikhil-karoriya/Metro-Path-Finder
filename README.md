@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-[Launch App](https://nikhil-karoriya.github.io/Metro-Path-Finder/index.html)
+[Launch Website](https://nikhil-karoriya.github.io/Metro-Path-Finder/index.html)
 
 ---
 
